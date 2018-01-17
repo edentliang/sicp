@@ -1,0 +1,24 @@
+Error list
+/home/haoxing/Project/dr-env/log/20180112014434029912245-log-dr-env-build.txt
+---------------------------
+192:error: realsense DKMS module failed to installed.
+193-
+194-------------------------------
+195-Deleting module version: 1.1.1-3-realsense
+196-completely from the DKMS tree.
+197-------------------------------
+--
+199:error: WARNING: Unknown configuration for Intel RealSense(TM) cameras!
+200-       To resolve, please follow the installation directions at:
+201-           http://wiki.ros.org/librealsense#Installation
+202-update /usr/local/include/json.hpp
+203-cat: gcc5.done: No such file or directory
+204-cat: gcc5.done: No such file or directory
+--
+34762:./md-unwind-support.h:65:47: error: dereferencing pointer to incomplete type ‘struct ucontext’
+34763-       sc = (struct sigcontext *) (void *) &uc_->uc_mcontext;
+34764-                                               ^
+34765-../../../libgcc/shared-object.mk:14: recipe for target 'unwind-dw2.o' failed
+34766-make[2]: *** [unwind-dw2.o] Error 1
+34767-make[2]: *** Waiting for unfinished jobs....
+
