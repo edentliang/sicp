@@ -2,7 +2,6 @@
   (list 'leaf symbol weight))
 
 (define (leaf? object)
-  
   (eq? (car object) 'leaf))
 
 (define (symbol-leaf x)
