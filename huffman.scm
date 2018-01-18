@@ -2,7 +2,8 @@
   (list 'leaf symbol weight))
 
 (define (leaf? object)
-  (eq? (car objext) 'leaf))
+  
+  (eq? (car object) 'leaf))
 
 (define (symbol-leaf x)
   (cadr x))
@@ -10,11 +11,11 @@
 (define (weight-leaf x)
   (caddr x))
 
-(define (make-tree left right)
+(define (make-code-tree left right)
   (list left
         right
         (append (symbol left) (symbol right))
-        (+ (weight left) (Weight right))
+        (+ (weight left) (weight right))
         ))
 
 (define (symbol tree)
@@ -44,9 +45,9 @@
         ((= bit 1) (right-bran tree))
         (else (error "error")))))
 
-(define (left-branch tree)
+(define (left-branch x)
   (car x))
 
-(define (right-branch tree)
+(define (right-branch x)
   (cadr x))
 
