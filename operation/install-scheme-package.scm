@@ -1,4 +1,4 @@
-define (install-scheme-number-package)
+(define (install-scheme-number-package)
   (define (tag x)
     (attach-tag 'scheme-number x))
   (put 'add '(scheme-number scheme-number)
@@ -11,7 +11,11 @@ define (install-scheme-number-package)
        (lambda (x y) (tag (/ x y))))
   (put 'make 'scheme-number
        (lambda (x) (tag x)))
+  (put-coercion 'scheme-number 'complex scheme-number->complx)
   'done)
 
 (define (make-scheme-number n)
   ((get 'make 'scheme-number) n))
+
+(define (scheme-number->complex n)
+  (make-complex-from-real-imag (content n) 0)
